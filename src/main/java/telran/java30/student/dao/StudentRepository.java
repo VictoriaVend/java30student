@@ -14,7 +14,7 @@ public interface StudentRepository extends MongoRepository<Student, Integer> {
 
 	long countByName(String name);
 
-	@Query("{'?0':{'$gte:?1'}}")
+	@Query("{'?0':{'$gte':?1}}")
 	Stream<Student> findByScors(String examName, int minScore);
 
 }

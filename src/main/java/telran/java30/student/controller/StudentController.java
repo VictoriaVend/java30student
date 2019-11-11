@@ -56,6 +56,8 @@ public class StudentController {
 	}
 	@GetMapping("/students/scors/{examName}/{minScore}")
 	public List<StudentResponsDto>findByExamScore(@PathVariable String examName,@PathVariable int minScore){
+
+		System.out.println(examName);
 		return studentService.findStudentsByExamScore(examName, minScore);
 	}
 

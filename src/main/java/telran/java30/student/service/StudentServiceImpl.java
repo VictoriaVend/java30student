@@ -119,7 +119,7 @@ public class StudentServiceImpl implements StudentService {
 	@Override
 	public List<StudentResponsDto> findStudentsByExamScore(String examName, int minScore) {
 		
-		return studentRepository.findByScors("scors."+examName,minScore)
+		return studentRepository.findByScors("scores."+examName,minScore)
 				.map(this::studentToStudentResponseDto).collect(Collectors.toList());
 	}
 }
