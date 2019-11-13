@@ -22,9 +22,6 @@ public interface StudentService {
 
 	long countStudentByName(String name);
 
-	
-	
-	
 	List<StudentResponsDto> findStudentsByExamScore(String examName, int minScore);
 
 }
